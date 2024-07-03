@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App {
+  font-family: sans-serif;
+  > div:first-of-type {
+    width: 100%;
+  }
+
+  .A {
+    // height: 100vh;
+    overflow-y: auto;
+    // flex-basis: 77%;
+    > div {
+      gap: 20px;
+      margin: 20px;
+      li {
+        height: 357px;
+      }
+    }
+  }
+  .B {
+    // height: 100vh;
+    // flex-grow: 1;
+    // flex-basis: 23%;
+    > div {
+      display: flex;
+      flex-direction: column !important;
+      gap: 20px;
+      margin: 20px;
+      > li {
+        height: 180px;
+        // max-width: 200px !important;
+        width: 100%;
+      }
+      > section {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 100% !important;
+        gap: 20px;
+        height: 100vh;
+
+        li {
+          width: 100%;
+          height: 180px;
+        }
+      }
+    }
+  }
+  .checkin_widget {
+    background: #1c325e url("./assets/checkin-img.svg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+  }
+}
+
+.leaveBalance_widget,
+.events_widget {
+  // .swiper {
+  //   overflow: hidden visible !important;
+  // }
+  .swiper-pagination {
+    // top: 0px !important;
+    // height: fit-content;
+    // left: 90% !important;
+    // position: absolute;
+    // .swiper-pagination-bullet {
+    //   background-color: #d9d9d9;
+    //   width: 8px !important;
+    //   height: 8px !important;
+    //   margin: 0 1px !important;
+    // }
+    // .swiper-pagination-bullet-active {
+    //   background-color: #49da61 !important;
+    //   width: 20px !important;
+    //   height: 6px !important;
+    //   border-radius: 6px !important;
+    //   margin: 0 1px 1px !important;
+    // }
+    .custom_pagination {
+      background-color: #d9d9d9;
+      width: 8px !important;
+      height: 7px !important;
+      margin: 0 1px !important;
+      border-radius: 6px !important;
+    }
+    .custom_pagination_active {
+      background-color: #49da61 !important;
+      width: 20px !important;
+      height: 6px !important;
+      border-radius: 6px !important;
+      margin: 0 1px 1px !important;
+    }
+  }
+}
+.holiday_widget {
+  .custom_pagination {
+    background-color: #d9d9d9;
+    width: 8px !important;
+    height: 7px !important;
+    margin: 0 1px !important;
+    border-radius: 6px !important;
+  }
+  .custom_pagination_active {
+    background-color: #ff5f5f !important;
+    width: 20px !important;
+    height: 6px !important;
+    border-radius: 6px !important;
+    margin: 0 1px 1px !important;
+  }
+}
+
+.leavebalance_box {
+  > div {
+    > div:last-of-type {
+      height: fit-content !important;
+      width: fit-content !important;
+      margin-top: -13px !important;
+      > svg {
+        width: 90px !important;
+        height: fit-content !important;
+        margin: 0 0 0 auto;
+      }
+    }
+  }
+}
+.birthday_widget {
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.current_day {
+  svg {
+    margin-left: -81px;
+    margin-top: -150px;
+    overflow: visible;
+  }
+}
+.progress-bar__wrapper {
+  position: relative;
+}
+
+progress {
+  width: 100px;
+  height: 5px;
+  border-radius: 50px;
+  background-color: #d8d8d8;
+  transition: width 300ms ease;
+}
+progress[value]::-webkit-progress-bar {
+  width: 100%;
+  height: 5px;
+  border-radius: 50px;
+  background-color: #d8d8d8;
+  transition: width 300ms ease;
+}
+progress[value]::-webkit-progress-value {
+  width: 0;
+  border-radius: 50px;
+  transition: width 300ms ease;
+}
+progress[value].red::-webkit-progress-value {
+  background-color: #e14747;
+}
+progress[value].green::-webkit-progress-value {
+  background-color: #51b066;
+}
+progress[value].yellow::-webkit-progress-value {
+  background-color: #fbe25d;
+}
+progress[value].lightgreen::-webkit-progress-value {
+  background-color: #1fb85c;
+}
+progress[value].ees::-webkit-progress-value {
+  width: 0;
+  border-radius: 50px;
+  background-color: #32c1ff !important ;
+  transition: width 300ms ease;
+}
+progress[value].attendance::-webkit-progress-value {
+  width: 0;
+  border-radius: 50px;
+  background-color: #f93e6b !important;
+  transition: width 300ms ease;
+}
+progress[value].workforce::-webkit-progress-value {
+  width: 0;
+  border-radius: 50px;
+  background-color: #72fb89 !important;
+  transition: width 300ms ease;
+}
+.double_progress {
+  // max-width: 200px;
+  height: 14px;
+  width: 100%;
+  border-radius: 40px;
+  overflow: hidden;
+  display: flex;
+
+  > div {
+    height: 100%;
+    &:first-of-type {
+      flex-basis: 60%;
+      background-color: #ffd6d6;
+    }
+    &:last-of-type {
+      flex-basis: 40%;
+      background-color: #9af6ae;
+    }
+  }
+}
+.main-shadow {
+  box-shadow: -1px 3px 15px 0px #0000000f;
+}
+.app_chart {
+  > div:first-of-type {
+    margin-left: 90px;
+    margin-top: -30px;
+  }
+}
+.no-select {
+  user-select: none;
+}
