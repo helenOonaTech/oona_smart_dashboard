@@ -14,7 +14,7 @@ import HolidayWidget from "../dashboard-widgets/holidays/HolidayWidget";
 import Events from "../dashboard-widgets/events/Events";
 import CurrentDayStatus from "../dashboard-widgets/current-status/CurrentDayStatus";
 import ApplicationsWidget from "../dashboard-widgets/applications/ApplicationsWidget";
-import LogsWidget from "../dashboard-widgets/logs/LogsWidget";
+import LogsWidget from "../dashboard-widgets/log/LogsWidget";
 
 export interface Props {
   dragOverlay?: boolean;
